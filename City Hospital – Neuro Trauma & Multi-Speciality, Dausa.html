@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>City Hospital – Neuro Trauma & Multi-Speciality, Dausa</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8f6ff;--b1:#e3d9ff;--b2:#c8eeff;--b3:#ffe4d6;--ink:#1e2247;--mut:#586082;--card:rgba(255,255,255,.84);--edge:rgba(255,255,255,.95);--sh:0 24px 60px -24px rgba(109,93,252,.35);--p:#6D5DFC;--b:#4890E0;--c:#00E6F2;--navy:#464B66;--t1:#7358ff;--t2:#2f9bff;--inp:rgba(255,255,255,.9);--navbg:rgba(248,246,255,.85);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+:root[data-theme="dark"]{--b3:#1a1550;--bg:#0b0d21;--b1:#2b2478;--b2:#0a4b66;--ink:#eef0ff;--mut:#a4abd2;--card:rgba(32,36,80,.72);--edge:rgba(150,160,255,.22);--sh:0 24px 60px -24px #000;--navy:#2c3160;--t1:#9a8dff;--t2:#62b6ff;--inp:rgba(8,10,32,.55);--navbg:rgba(11,13,33,.8);color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;color:var(--ink);font:500 17px/1.6 "Plus Jakarta Sans","Noto Sans Devanagari",system-ui,sans-serif;background:radial-gradient(900px 520px at 8% -4%,var(--b1),transparent 70%),radial-gradient(800px 520px at 100% 8%,var(--b2),transparent 70%),radial-gradient(900px 600px at 50% 100%,var(--b3),transparent 70%),var(--bg);transition:background .4s,color .3s}
+h1,h2,h3{margin:0;line-height:1.1;font-weight:800;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.hdr{position:sticky;top:0;z-index:8;background:var(--navbg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1.5px solid var(--edge)}
+nav{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0}
+.logo{display:flex;gap:9px;align-items:center;font-weight:800;font-size:19px;text-decoration:none;white-space:nowrap}
+.cross{width:30px;height:30px;border-radius:10px;background:linear-gradient(135deg,var(--p),var(--b));position:relative;flex:none}
+.cross::before,.cross::after{content:"";position:absolute;background:#fff;border-radius:2px}
+.cross::before{left:13px;top:6px;width:4px;height:18px}.cross::after{left:6px;top:13px;width:18px;height:4px}
+.links{display:flex;gap:18px;font-size:15px}.links a{text-decoration:none;color:var(--mut)}.links a:hover{color:var(--ink)}
+@media(max-width:860px){.links{display:none}}
+.tools{display:flex;gap:8px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;background:linear-gradient(135deg,var(--p),var(--b));color:#fff;padding:13px 22px;border-radius:999px;font:700 16px "Plus Jakarta Sans","Noto Sans Devanagari",sans-serif;text-decoration:none;cursor:pointer;box-shadow:0 10px 24px -10px var(--p)}
+.btn.sm{padding:8px 14px;font-size:14px}
+.btn.navy{background:var(--navy);box-shadow:none}
+.btn.ghost{background:var(--card);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--edge)}
+.btn.wa{background:#1fa855;box-shadow:0 10px 24px -10px #1fa855}
+:focus-visible{outline:3px solid var(--c);outline-offset:2px}
+.card{background:var(--card);border:1.5px solid var(--edge);border-radius:34px;box-shadow:var(--sh)}
+.pad{padding:28px}
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:10px;align-items:center;padding:34px 0 10px}
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(46px,8.4vw,92px);background:linear-gradient(90deg,var(--t1),var(--t2));-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:6px}
+.hero h2{font-size:clamp(26px,4vw,40px);margin-top:4px}
+.hero .loc{font-size:20px;color:var(--mut);font-weight:500;margin:4px 0 18px}
+.pill{display:inline-block;background:var(--navy);color:#fff;font-style:italic;padding:10px 18px;border-radius:12px;font-size:15px;margin-bottom:22px}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.stage{position:relative;height:440px}
+.frame{position:absolute;inset:7% 7%;border-radius:44px;background:linear-gradient(160deg,#e0d6ff,#bfe9ff 60%,#ffe2d4);opacity:.95}
+:root[data-theme="dark"] .frame{background:linear-gradient(160deg,#2f2f86,#13506d);opacity:.9}
+.frame::before,.frame::after{content:"";position:absolute;border-radius:9px;background:inherit;opacity:.7}
+.frame::before{width:38px;height:38px;top:-16px;left:34px}.frame::after{width:26px;height:26px;bottom:26px;right:-12px}
+.hw{position:absolute;left:50%;top:50%;translate:-50% -50%;width:min(74%,340px)}
+.hw svg{display:block;width:100%;animation:beat 1.5s ease-in-out infinite;transform-origin:50% 55%;filter:drop-shadow(0 18px 24px rgba(72,144,224,.35))}
+@keyframes beat{0%,100%{transform:scale(1)}12%{transform:scale(1.07)}24%{transform:scale(1)}38%{transform:scale(1.045)}52%{transform:scale(1)}}
+.ring{position:absolute;left:50%;top:52%;width:58%;aspect-ratio:1;border-radius:50%;border:2px solid var(--c);animation:ring 1.5s ease-out infinite}
+@keyframes ring{0%{transform:translate(-50%,-50%) scale(.75);opacity:.8}100%{transform:translate(-50%,-50%) scale(1.3);opacity:0}}
+.dna{position:absolute;left:-2%;bottom:0;width:22%;max-width:96px;height:80%}
+.dna svg,.mol svg,.cell svg{width:100%;height:100%;display:block}
+.mol{position:absolute;right:1%;top:0;width:26%;max-width:120px;animation:spin 26s linear infinite}
+.cell{position:absolute;right:4%;bottom:0;width:22%;max-width:100px;animation:float 5s ease-in-out infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes float{50%{transform:translateY(-14px)}}
+/* shelf */
+section{padding:54px 0}
+h2.sec{font-size:clamp(30px,4.6vw,50px);margin-bottom:10px}
+.sub{color:var(--mut);max-width:56ch;margin:0 0 26px}
+.shelf{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;padding:26px 18px;text-align:center}
+.org{transition:transform .3s}.org:hover{transform:translateY(-8px) scale(1.06)}
+.org svg{width:100%;max-width:120px;height:110px}
+.org:nth-child(odd) svg{animation:float 6s ease-in-out infinite}.org:nth-child(even) svg{animation:float 7s ease-in-out -2s infinite}
+.org span{display:block;color:var(--mut);font-size:14px}
+/* triage */
+.triage{background:linear-gradient(135deg,#6D5DFC,#4890E0);color:#fff;border-radius:34px;padding:30px;box-shadow:var(--sh)}
+.triage .sub{color:#fff;opacity:.88}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px}
+.chip{border:1.5px solid var(--edge);background:var(--inp);color:var(--ink);border-radius:999px;padding:8px 16px;font:600 15px "Plus Jakarta Sans","Noto Sans Devanagari",sans-serif;cursor:pointer}
+.chip[aria-pressed="true"]{background:linear-gradient(135deg,var(--p),var(--b));color:#fff;border-color:transparent}
+.triage .chip{background:#ffffff26;color:#fff;border-color:#ffffff66}
+.triage .chip[aria-pressed="true"]{background:#fff;color:#4a3fd0}
+.res{background:#0000002e;border-radius:20px;padding:16px 18px;min-height:64px}
+.res .btn{background:#fff;color:#4a3fd0;box-shadow:none;margin-top:10px}
+.q{font-weight:700;font-size:15px;color:var(--mut);margin:14px 0 0}
+input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--inp);border:1.5px solid var(--edge);border-radius:18px;padding:13px 16px;margin-top:10px}
+textarea{min-height:76px;resize:vertical}
+.note{font-size:14px;color:var(--mut);margin-top:12px}
+.grid{display:grid;gap:22px;grid-template-columns:1fr 1fr}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+/* rating */
+.score{font-size:68px;font-weight:800;line-height:1;background:linear-gradient(90deg,var(--t1),var(--t2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.label{color:var(--mut);font-size:15px;min-height:24px}
+.bars{display:flex;gap:10px;align-items:flex-end;height:110px;margin:8px 0 4px}
+.bar{flex:1;border:0;border-radius:14px;background:var(--edge);cursor:pointer;transition:background .2s,box-shadow .2s}
+:root:not([data-theme="dark"]) .bar{background:#dfe2f5}
+.bar:nth-child(1){height:30%}.bar:nth-child(2){height:48%}.bar:nth-child(3){height:66%}.bar:nth-child(4){height:84%}.bar:nth-child(5){height:100%}
+.bar.on{background:linear-gradient(180deg,var(--c),var(--p));box-shadow:0 0 24px -2px var(--c)}
+.cat{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-top:1px dashed var(--edge)}
+.dots{display:flex;gap:6px}
+.dot{width:26px;height:26px;border-radius:50%;border:2px solid var(--mut);opacity:.6;background:transparent;cursor:pointer;padding:0}
+.dot.on{background:var(--p);border-color:var(--p);opacity:1}
+.revs{max-height:300px;overflow-y:auto;margin-top:8px}
+.rev{border-top:1.5px solid var(--edge);padding:12px 0}
+/* misc */
+.dep{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.dep div,.docs>div{padding:22px}
+.dep h3{font-size:21px;margin-bottom:6px}.dep p{margin:0;color:var(--mut);font-size:15px}
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.doc{display:flex;gap:14px;align-items:center}
+.av{width:60px;height:60px;border-radius:50% 50% 50% 10px;background:linear-gradient(135deg,var(--p),var(--c));display:grid;place-items:center;font-weight:800;color:#fff;flex:none}
+.emerg{background:linear-gradient(135deg,#ff5a4d,#e5392d);color:#fff;border-radius:34px;padding:30px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+.emerg h2{font-size:clamp(26px,4vw,42px)}
+.emerg .btn{background:#fff;color:#a31d14;box-shadow:none}
+details{border-top:1.5px solid var(--edge);padding:14px 0}
+details:last-child{border-bottom:1.5px solid var(--edge)}
+summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--p);font-size:26px;line-height:1}
+details[open] summary::after{content:"–"}
+details p,details ul{color:var(--mut);margin:10px 0 0;font-size:16px}details ul{padding-left:20px}
+footer{padding:34px 0 96px;color:var(--mut);font-size:15px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:9}
+.toast{position:fixed;left:50%;bottom:calc(80px + env(safe-area-inset-bottom,0px));transform:translate(-50%,220%);background:var(--navy);color:#fff;padding:12px 20px;border-radius:999px;transition:transform .3s;z-index:10;max-width:90vw;text-align:center}
+.toast.show{transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+.himg{position:absolute;left:50%;top:50%;translate:-50% -50%;height:112%;aspect-ratio:620/926;animation:float 7s ease-in-out infinite}
+.pic{position:absolute;inset:0;transform-origin:50% 56%;animation:beat2 1.5s ease-in-out infinite}
+@keyframes beat2{0%,100%{transform:scale(1)}12%{transform:scale(1.035)}24%{transform:scale(1)}38%{transform:scale(1.022)}52%{transform:scale(1)}}
+.glow{position:absolute;left:50%;top:52%;width:84%;aspect-ratio:1;border-radius:50%;translate:-50% -50%;background:radial-gradient(circle,rgba(72,144,224,.5),rgba(109,93,252,.22) 45%,transparent 70%);animation:glow 1.5s ease-in-out infinite}
+@keyframes glow{0%,100%{transform:scale(.92);opacity:.7}12%{transform:scale(1.08);opacity:1}}
+.bub{position:absolute;bottom:4%;left:var(--l);width:var(--s);height:var(--s);border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,rgba(160,190,255,.4) 55%,rgba(110,120,255,.28));border:1px solid rgba(255,255,255,.75);opacity:0;animation:rise var(--t) linear var(--d) infinite}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}15%{opacity:.9}100%{transform:translateY(-380px) scale(1);opacity:0}}
+:root:not([data-theme="dark"]){--bg:#f4f8f5;--b1:#e2f2e8;--b2:#e5f0f8;--b3:#fbefed;--ink:#20352a;--mut:#5d7165;--card:rgba(255,255,255,.92);--edge:#dce8df;--sh:0 22px 54px -30px rgba(29,72,48,.26);--p:#188653;--b:#2879a5;--c:#d2474b;--navy:#244534;--t1:#c94348;--t2:#168653;--inp:#f7faf8;--navbg:rgba(248,251,249,.9);--brain-hi:#f7c7ad;--brain-mid:#dc907e;--brain-low:#ad5c59;--cell-base:#a8ddc1;--cell-shadow:#3b9875;color-scheme:light}
+:root:not([data-theme="dark"]) .cross{background:#e5393f}
+:root:not([data-theme="dark"]) .triage{background:linear-gradient(135deg,#17a06a,#0b7a4d)}
+:root:not([data-theme="dark"]) .triage .chip[aria-pressed="true"],:root:not([data-theme="dark"]) .res .btn{color:#0b7a4d}
+:root:not([data-theme="dark"]) .frame{background:linear-gradient(160deg,#ffe9e6,#e0f6e9)}
+:root:not([data-theme="dark"]) .bar{background:#e8eeea}
+:root[data-theme="dark"]{--bg:#101713;--b1:#183426;--b2:#172b36;--b3:#34201f;--ink:#eef5f0;--mut:#a8b8ad;--card:rgba(27,39,32,.94);--edge:rgba(218,239,224,.13);--sh:0 24px 60px -24px rgba(0,0,0,.62);--p:#31b878;--b:#62b2d8;--c:#ff8583;--navy:#243b2e;--t1:#ff8c85;--t2:#53d695;--inp:rgba(255,255,255,.055);--navbg:rgba(16,23,19,.9);--brain-hi:#f4bea8;--brain-mid:#cf8178;--brain-low:#8e4d54;--cell-base:#5bb88d;--cell-shadow:#286d5e;color-scheme:dark}
+:root[data-theme="dark"] .cross{background:#ff4d57}
+:root[data-theme="dark"] .triage{background:linear-gradient(135deg,#13995a,#0a6a3d)}
+:root[data-theme="dark"] .triage .chip[aria-pressed="true"],:root[data-theme="dark"] .res .btn{color:#0a6a3d}
+:root[data-theme="dark"] .frame{background:linear-gradient(160deg,#0f2a1c,#2b1014 70%,#0a1a33);opacity:.95}
+.pic svg{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 16px 22px rgba(190,30,50,.45))}
+.himg{height:auto;width:min(72%,330px);aspect-ratio:300/340}
+.glow{background:radial-gradient(circle,rgba(229,57,63,.4),rgba(229,57,63,.12) 45%,transparent 70%)}
+.flow{stroke-dasharray:5 11;animation:flow 1.3s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-32}}
+.sw{position:relative;width:62px;height:34px;border:0;border-radius:999px;background:#dfe9e3;cursor:pointer;padding:0;flex:none;transition:background .3s;box-shadow:inset 0 0 0 1.5px var(--edge)}
+.sw[aria-checked="true"]{background:#1d2c24}
+.kn{position:absolute;top:3px;left:3px;width:28px;height:28px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 2px 6px rgba(0,0,0,.3);transition:transform .28s}
+.sw[aria-checked="true"] .kn{transform:translateX(28px);background:#0b0f0d}
+.kn svg{width:17px;height:17px}.kn .m{display:none}
+.sw[aria-checked="true"] .kn .s{display:none}.sw[aria-checked="true"] .kn .m{display:block}
+@media(max-width:430px){.logo{font-size:15px;gap:6px}.tools{gap:5px}.btn.sm{padding:7px 11px;font-size:13px}.sw{width:54px;height:30px}.kn{width:24px;height:24px}.sw[aria-checked="true"] .kn{transform:translateX(24px)}}
+/* Anatomy illustrations and theme-aware surfaces */
+.hero h1{font-size:clamp(44px,7vw,80px)}
+.stage{isolation:isolate}
+.frame{background-color:var(--card);background-image:linear-gradient(rgba(84,133,103,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(84,133,103,.08) 1px,transparent 1px),linear-gradient(145deg,var(--b1),var(--b2) 68%,var(--b3));background-size:24px 24px,24px 24px,cover;border:1px solid var(--edge);box-shadow:inset 0 0 60px rgba(255,255,255,.16)}
+:root[data-theme="dark"] .frame{background-image:linear-gradient(rgba(202,231,211,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(202,231,211,.07) 1px,transparent 1px),linear-gradient(145deg,var(--b1),var(--b2) 68%,var(--b3));box-shadow:inset 0 0 60px rgba(0,0,0,.12)}
+.glow{background:radial-gradient(circle,rgba(210,71,75,.22),rgba(40,121,165,.1) 48%,transparent 72%)}
+:root[data-theme="dark"] .glow{background:radial-gradient(circle,rgba(255,133,131,.2),rgba(98,178,216,.1) 48%,transparent 72%)}
+.ring{border-color:var(--b)}
+.shelf{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;padding:18px}
+.org{min-width:0;padding:12px 10px 10px;border:1px solid var(--edge);border-radius:22px;background:var(--card);box-shadow:0 8px 20px -16px rgba(24,65,43,.35);transition:transform .25s,border-color .25s,box-shadow .25s}
+.org:hover{transform:translateY(-5px);border-color:var(--p);box-shadow:0 14px 28px -20px rgba(24,65,43,.5)}
+.org svg{display:block;width:100%;max-width:112px;height:104px;margin:0 auto 6px}
+.org:nth-child(3) svg{max-width:40px}
+.org:nth-child(odd) svg,.org:nth-child(even) svg{animation:none}
+.org span{color:var(--ink);font-size:13px;font-weight:800;letter-spacing:.02em}
+.org span small{display:block;margin-top:2px;color:var(--mut);font-size:10px;font-weight:600;letter-spacing:.04em}
+.card,.triage,.emerg{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.btn.ghost{border:1px solid var(--edge)}
+.pill{background:var(--navy);color:#fff}
+.toast{visibility:hidden;pointer-events:none}
+.toast.show{visibility:visible;pointer-events:auto}
+.sw[aria-checked="true"]{background:var(--p)}
+.sw[aria-checked="true"] .kn{background:#fff}
+.sw[aria-checked="true"] .kn .m path{fill:var(--navy)}
+input::placeholder,textarea::placeholder{color:var(--mut);opacity:.82}
+.himg,.pic,.mol{animation:none}
+.ring{display:none}
+.glow{opacity:.42}
+.pic svg{filter:drop-shadow(0 12px 18px rgba(62,65,58,.16))}
+.heart-viz.is-active{animation:heart-float 8s ease-in-out infinite}
+.heart-viz.is-active .myocardium{animation:heart-beat 1.45s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 56%}
+.heart-viz.is-active .heart-aura{animation:heart-aura 1.45s ease-in-out infinite}
+.heart-viz.is-active .vessel-glint{animation:vessel-flow 2.8s linear infinite}
+.heart-viz.is-active .vessel-glint.slow{animation-duration:3.6s}
+.heart-viz.is-active .vessel-pulse{animation:vessel-pulse 1.45s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.heart-viz .rbc{opacity:.94}
+@keyframes heart-beat{0%,100%{transform:scale(1)}9%{transform:scale(1.012,.994)}18%{transform:scale(.994,1.008)}29%{transform:scale(1)}39%{transform:scale(1.007,.996)}49%{transform:scale(.997,1.005)}60%,100%{transform:scale(1)}}
+@keyframes heart-aura{0%,100%{opacity:.18;transform:scale(.98)}12%{opacity:.36;transform:scale(1.04)}45%{opacity:.2;transform:scale(1)}}
+@keyframes vessel-flow{to{stroke-dashoffset:-52}}
+@keyframes vessel-pulse{0%,100%{opacity:.52;stroke-width:2.4}15%{opacity:.9;stroke-width:3.1}48%{opacity:.58;stroke-width:2.4}}
+@keyframes heart-float{0%,100%{translate:-50% -50%}50%{translate:-50% calc(-50% - 4px)}}
+.heart-viz:not(.is-active),.heart-viz:not(.is-active) *{animation-play-state:paused!important}
+.plate-kicker{position:absolute;z-index:2;top:9%;left:13%;display:flex;align-items:center;gap:8px;color:var(--mut);font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.plate-kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--p)}
+.plate-kicker b{color:var(--ink);font-weight:800}
+.plate-legend{position:absolute;z-index:2;left:50%;bottom:5%;display:flex;gap:14px;transform:translateX(-50%);white-space:nowrap;color:var(--mut);font-size:8px;font-weight:800;letter-spacing:.08em}
+.plate-legend span{display:flex;align-items:center;gap:5px}
+.plate-legend i{width:7px;height:7px;border-radius:50%;background:#c44748}
+.plate-legend .vein{background:#367fbd}
+.bub{display:none}
+@media(max-width:700px){.shelf{grid-template-columns:repeat(2,minmax(0,1fr));padding:12px;gap:10px}.org:last-child{grid-column:1/-1;width:calc(50% - 5px);justify-self:center}}
+@media(prefers-reduced-motion:reduce){.org,.org:hover{transition:none}}
+</style>
+</head>
+<body>
+<!-- shared glass art -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="gH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1eeff"/><stop offset=".5" stop-color="#a9b9ff"/><stop offset="1" stop-color="#6fd3ff"/></linearGradient>
+<linearGradient id="gT" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#a9c4ff"/></linearGradient>
+<radialGradient id="gB" cx=".32" cy=".25" r=".9"><stop offset="0" stop-color="var(--brain-hi)"/><stop offset=".6" stop-color="var(--brain-mid)"/><stop offset="1" stop-color="var(--brain-low)"/></radialGradient>
+<radialGradient id="gS" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".45" stop-color="#a9b4ff"/><stop offset="1" stop-color="#6D5DFC"/></radialGradient>
+<radialGradient id="gC" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#8ffcf0"/><stop offset=".55" stop-color="#12b3a8"/><stop offset="1" stop-color="#05666b"/></radialGradient>
+<g id="heart"><rect x="92" y="10" width="24" height="56" rx="12" fill="url(#gT)" stroke="#fff" stroke-opacity=".9"/><rect x="124" y="20" width="19" height="46" rx="9.5" fill="url(#gT)" stroke="#fff" stroke-opacity=".9"/><rect x="64" y="26" width="17" height="40" rx="8.5" fill="url(#gT)" stroke="#fff" stroke-opacity=".9"/>
+<path d="M110 205C18 142 10 80 58 60C84 49 106 64 110 82C114 64 136 49 162 60C210 80 202 142 110 205Z" fill="url(#gH)" stroke="#fff" stroke-width="2" stroke-opacity=".9"/>
+<g fill="none" stroke="#4890E0" stroke-width="2.6" stroke-linecap="round"><path d="M110 62C100 92 82 102 70 134"/><path d="M110 62C120 96 142 106 152 128"/><path d="M110 78C107 112 113 134 108 168"/><path d="M84 86C96 102 100 112 98 138"/><path d="M136 88C128 104 124 116 126 140"/></g>
+<ellipse cx="72" cy="104" rx="13" ry="30" transform="rotate(-18 72 104)" fill="#fff" opacity=".5"/><ellipse cx="150" cy="86" rx="6" ry="12" transform="rotate(25 150 86)" fill="#fff" opacity=".45"/>
+<path d="M110 82C98 91 92 106 90 132M110 82C122 92 132 108 134 132" fill="none" stroke="#b81d2d" stroke-width="3" stroke-linecap="round" opacity=".65"/><path d="M110 82V161" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="3 5" opacity=".8"/></g>
+<g id="brain"><path d="M24 70C8 36 46 8 78 20C96 6 132 12 142 42C160 58 154 96 126 106C114 124 72 126 62 108C28 110 16 92 24 70Z" fill="url(#gB)" stroke="#aab0d8" stroke-opacity=".6"/>
+<g fill="none" stroke="#a7aed8" stroke-opacity=".72" stroke-width="2.4" stroke-linecap="round"><path d="M82 22C78 50 86 80 80 112"/><path d="M40 52C55 42 65 62 78 52"/><path d="M36 82C52 72 64 94 78 84"/><path d="M96 38C108 30 124 46 118 60"/><path d="M92 82C106 72 124 88 132 72"/><path d="M50 32C42 40 48 48 58 50"/><path d="M30 66C44 60 48 68 48 76"/><path d="M105 26C98 36 104 44 114 44"/><path d="M134 52C122 58 126 68 140 70"/><path d="M100 98C110 90 120 96 122 104"/><path d="M58 98C66 90 72 96 72 106"/></g>
+<ellipse cx="54" cy="36" rx="16" ry="8" transform="rotate(-25 54 36)" fill="#fff" opacity=".3"/><circle cx="100" cy="60" r="3.5" fill="#00E6F2"/><circle cx="52" cy="78" r="3" fill="#00E6F2"/></g>
+<g id="mol"><g stroke="#9aa5ff" stroke-width="4.5" stroke-linecap="round"><line x1="80" y1="80" x2="30" y2="45"/><line x1="80" y1="80" x2="130" y2="40"/><line x1="80" y1="80" x2="125" y2="125"/><line x1="80" y1="80" x2="35" y2="125"/></g>
+<circle cx="80" cy="80" r="17" fill="url(#gS)"/><circle cx="30" cy="45" r="11" fill="url(#gS)"/><circle cx="130" cy="40" r="13" fill="url(#gS)"/><circle cx="125" cy="125" r="15" fill="url(#gS)"/><circle cx="35" cy="125" r="10" fill="url(#gS)"/></g>
+<g id="cell"><circle cx="60" cy="60" r="55" fill="url(#gC)" stroke="#e9fff0" stroke-width="3"/><g fill="#ffffff" fill-opacity=".18" stroke="#fff" stroke-opacity=".4"><circle cx="40" cy="42" r="14"/><circle cx="72" cy="38" r="12"/><circle cx="84" cy="68" r="15"/><circle cx="48" cy="76" r="13"/><circle cx="66" cy="90" r="10"/><circle cx="30" cy="66" r="9"/></g><ellipse cx="38" cy="26" rx="18" ry="9" transform="rotate(-30 38 26)" fill="#fff" opacity=".4"/>
+<ellipse cx="65" cy="61" rx="16" ry="19" fill="#385a9d" stroke="#d7efff" stroke-width="2"/><circle cx="67" cy="60" r="5" fill="#f3c477"/><path d="M29 52c8-8 15 7 22-1m24 37c7-8 15 7 22-1M78 32c7-7 12 5 18-2" fill="none" stroke="#d9fff0" stroke-width="2.5" stroke-linecap="round"/><path d="M37 87c5-7 11 6 16-1" fill="none" stroke="#e9b08a" stroke-width="5" stroke-linecap="round"/></g>
+</defs></svg>
+
+<header class="hdr"><div class="wrap"><nav>
+ <a class="logo" href="#top"><span class="cross"></span>City Hospital</a>
+ <div class="links"><a href="#triage" data-i="n1">Who to see</a><a href="#book" data-i="n2">Book</a><a href="#rate" data-i="n3">Reviews</a><a href="#aid" data-i="n4">First aid</a><a href="#faq" data-i="n5">Questions</a></div>
+ <div class="tools"><button class="btn ghost sm" id="lang" aria-label="Switch language">हिंदी</button><button class="sw" id="theme" role="switch" aria-checked="false" aria-label="Night mode"><i class="kn"><svg class="s" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5" fill="#fbbf24"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg><svg class="m" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="#cfd8ff"/></svg></i></button><a class="btn sm" href="#book" data-i="n6">Book</a></div>
+</nav></div></header>
+
+<div class="wrap">
+<div class="hero" id="top">
+ <div>
+  <h1 data-i="h1a">City Hospital</h1>
+  <h2 data-i="h1b">Neuro Trauma & Multi-Speciality</h2>
+  <p class="loc" data-i="h1c">Dausa, Rajasthan</p>
+  <span class="pill" data-i="pill">Book in a minute. Rate honestly.</span>
+  <div class="ctas">
+   <a class="btn" href="#book" data-i="c1">Book appointment</a>
+   <a class="btn wa" href="#" data-wa="Hello City Hospital, I need some help." data-i="c2">Chat on WhatsApp</a>
+   <a class="btn ghost" href="#rate" data-i="c3">Rate the hospital</a>
+  </div>
+ </div>
+ <div class="stage" aria-hidden="true">
+  <div class="frame"></div><div class="glow"></div><div class="ring"></div>
+  <div class="dna"><svg id="dnaA" viewBox="0 0 90 300"></svg></div><div class="mol"><svg viewBox="0 0 160 160"><use href="#mol"/></svg></div>
+  <div class="plate-kicker"><b>Heart anatomy</b><span>01 / circulation</span></div>
+  <div class="himg heart-viz"><div class="pic"><svg id="hero-heart" viewBox="0 0 300 340" role="img" aria-label="Animated anatomical heart showing the four chambers, major vessels and coronary arteries">
+   <defs>
+    <linearGradient id="myocardium" x1=".12" y1=".08" x2=".88" y2=".92"><stop stop-color="#ffe0d2"/><stop offset=".28" stop-color="#f1a99a"/><stop offset=".65" stop-color="#d87572"/><stop offset="1" stop-color="#a74752"/></linearGradient>
+    <linearGradient id="ventricle-left" x1=".1" y1=".05" x2=".9" y2="1"><stop stop-color="#f6b6a5"/><stop offset=".46" stop-color="#dc7772"/><stop offset="1" stop-color="#ae4d57"/></linearGradient>
+    <linearGradient id="ventricle-right" x1=".1" y1="0" x2=".9" y2="1"><stop stop-color="#e99187"/><stop offset=".55" stop-color="#ce6668"/><stop offset="1" stop-color="#a64752"/></linearGradient>
+    <linearGradient id="atrium-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd4c2"/><stop offset=".62" stop-color="#e99a8c"/><stop offset="1" stop-color="#c76768"/></linearGradient>
+    <linearGradient id="arterial-fill" x1=".12" y1="0" x2=".84" y2="1"><stop stop-color="#f3a094"/><stop offset=".4" stop-color="#d25458"/><stop offset="1" stop-color="#923848"/></linearGradient>
+    <linearGradient id="venous-fill" x1=".08" y1="0" x2=".85" y2="1"><stop stop-color="#b9dbe0"/><stop offset=".38" stop-color="#6fabc1"/><stop offset="1" stop-color="#397399"/></linearGradient>
+    <linearGradient id="pulmonary-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c1b6df"/><stop offset=".5" stop-color="#7e8fc2"/><stop offset="1" stop-color="#546f9c"/></linearGradient>
+    <radialGradient id="heart-aura"><stop stop-color="#e77470" stop-opacity=".23"/><stop offset="1" stop-color="#e77470" stop-opacity="0"/></radialGradient>
+    <radialGradient id="tissue-light" cx=".28" cy=".2" r=".82"><stop stop-color="#fff" stop-opacity=".6"/><stop offset=".48" stop-color="#fff" stop-opacity=".13"/><stop offset="1" stop-color="#7d263c" stop-opacity=".2"/></radialGradient>
+    <filter id="heart-depth" x="-35%" y="-25%" width="170%" height="170%"><feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/><feOffset dy="5" result="offset"/><feComponentTransfer><feFuncA type="linear" slope=".18"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+   </defs>
+   <ellipse class="heart-aura" cx="153" cy="197" rx="112" ry="126" fill="url(#heart-aura)"/>
+   <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M111 150C108 128 105 102 106 48" stroke="#315f7d" stroke-opacity=".18" stroke-width="27"/>
+    <path d="M111 150C108 128 105 102 106 48" stroke="url(#venous-fill)" stroke-width="21"/>
+    <path d="M106 252C105 272 103 289 102 310" stroke="#315f7d" stroke-opacity=".16" stroke-width="25"/>
+    <path d="M106 252C105 272 103 289 102 310" stroke="url(#venous-fill)" stroke-width="19"/>
+    <path d="M143 157C137 135 128 119 112 112C99 106 86 109 81 117" stroke="#45577f" stroke-opacity=".16" stroke-width="21"/>
+    <path d="M143 157C137 135 128 119 112 112C99 106 86 109 81 117" stroke="url(#pulmonary-fill)" stroke-width="15"/>
+    <path d="M165 151C174 133 189 122 208 119" stroke="#7d3e64" stroke-opacity=".16" stroke-width="20"/>
+    <path d="M165 151C174 133 189 122 208 119" stroke="url(#arterial-fill)" stroke-width="14"/>
+    <path d="M171 151C169 126 170 94 180 72C190 52 207 45 222 52C238 60 240 75 232 87C224 98 209 95 205 84" stroke="#70384a" stroke-opacity=".18" stroke-width="27"/>
+    <path d="M171 151C169 126 170 94 180 72C190 52 207 45 222 52C238 60 240 75 232 87C224 98 209 95 205 84" stroke="url(#arterial-fill)" stroke-width="20"/>
+    <path d="M188 59L183 36M202 50L201 27M218 51L225 31" stroke="#ae4b54" stroke-width="10"/>
+    <path d="M191 58L187 39M204 49L203 31M219 51L225 35" stroke="#ffd0bf" stroke-opacity=".6" stroke-width="2.5"/>
+    <path d="M214 130C231 125 246 128 259 136M215 145C232 141 247 145 258 153" stroke="#a74850" stroke-opacity=".18" stroke-width="16"/>
+    <path d="M214 130C231 125 246 128 259 136M215 145C232 141 247 145 258 153" stroke="url(#arterial-fill)" stroke-width="11"/>
+   </g>
+   <g class="myocardium" filter="url(#heart-depth)">
+    <path d="M151 307C137 294 99 269 77 232C53 193 51 157 69 132C80 117 96 109 113 112C130 114 142 127 151 143C165 120 184 108 204 112C230 117 248 143 247 174C246 219 211 269 151 307Z" fill="url(#myocardium)" stroke="#9b4e56" stroke-width="3"/>
+    <path d="M151 305C133 282 102 258 84 222C68 190 66 158 81 139C91 127 103 123 116 127C132 131 142 148 146 169C149 194 150 232 151 305Z" fill="url(#ventricle-left)"/>
+    <path d="M153 305C157 267 157 224 160 192C162 159 178 132 196 127C216 121 231 137 234 158C240 193 222 231 204 257C187 280 169 296 153 305Z" fill="url(#ventricle-right)"/>
+    <path d="M83 146C92 132 105 128 118 132C134 136 142 151 143 170C129 182 105 183 89 171C82 165 80 154 83 146Z" fill="url(#atrium-fill)" stroke="#b86064" stroke-width="1.5"/>
+    <path d="M164 168C166 147 179 132 194 129C211 125 224 138 227 154C230 169 220 180 205 184C188 188 173 181 164 168Z" fill="url(#atrium-fill)" stroke="#b86064" stroke-width="1.5"/>
+    <path d="M75 143C83 125 99 116 114 118M184 121C202 113 221 123 230 140" fill="none" stroke="#ffe0d1" stroke-opacity=".65" stroke-width="3"/>
+    <path d="M153 148C148 189 151 239 153 292" fill="none" stroke="#8f424e" stroke-opacity=".5" stroke-width="8"/>
+    <path d="M153 151C149 194 152 242 153 290" fill="none" stroke="#f7c8b7" stroke-width="3"/>
+    <path d="M142 174C147 177 157 178 164 173" fill="none" stroke="#ffe2d1" stroke-width="3"/>
+    <path d="M137 174C140 182 146 186 151 184M165 173C162 181 157 185 152 184" fill="none" stroke="#fff0df" stroke-width="3" stroke-linecap="round"/>
+    <path d="M86 200C102 220 120 239 138 260M219 190C205 215 185 243 166 264" fill="none" stroke="#9d424d" stroke-opacity=".22" stroke-width="2"/>
+    <path d="M74 165C78 198 96 237 128 270M232 166C226 202 203 241 174 273" fill="none" stroke="url(#tissue-light)" stroke-width="9"/>
+    <path d="M100 188C111 205 119 222 131 234M194 193C185 210 177 225 169 237" fill="none" stroke="#f4b0a1" stroke-opacity=".26" stroke-width="3"/>
+   </g>
+   <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M169 148C162 151 155 156 149 162" stroke="#8f3445" stroke-width="4.5"/>
+    <path d="M149 162C137 153 119 153 107 163C95 173 100 185 114 193C128 200 137 208 142 221" stroke="#963a48" stroke-width="3.8"/>
+    <path d="M119 196C111 205 109 215 115 224M132 208C125 218 125 228 131 238M138 217C147 225 151 237 151 250" stroke="#ad4550" stroke-width="2.6"/>
+    <path d="M151 161C147 181 152 201 156 219C160 238 157 257 153 277" stroke="#963a48" stroke-width="4.2"/>
+    <path d="M151 188C141 196 134 203 130 213M156 205C166 198 176 195 184 187M157 230C168 237 173 247 175 260M155 247C146 256 142 266 142 276M158 220C151 229 147 238 146 248" stroke="#ad4550" stroke-width="2.6"/>
+    <path d="M169 151C182 147 196 151 205 161C214 171 209 183 197 192C185 201 177 211 173 225" stroke="#963a48" stroke-width="3.8"/>
+    <path d="M192 196C201 205 204 215 199 225M181 210C189 219 190 229 185 239M173 222C165 233 163 244 165 255" stroke="#ad4550" stroke-width="2.6"/>
+    <path d="M149 162C137 153 119 153 107 163C95 173 100 185 114 193C128 200 137 208 142 221" class="vessel-glint" stroke="#ffc2b3" stroke-width="1.35" stroke-dasharray="7 24"/>
+    <path d="M151 161C147 181 152 201 156 219C160 238 157 257 153 277" class="vessel-glint slow" stroke="#ffd0bf" stroke-width="1.3" stroke-dasharray="7 22"/>
+    <path d="M169 151C182 147 196 151 205 161C214 171 209 183 197 192C185 201 177 211 173 225" class="vessel-glint slow" stroke="#ffc2b3" stroke-width="1.3" stroke-dasharray="7 23"/>
+    <path d="M106 52V111M106 263L103 300M174 146C170 117 174 87 188 66M220 130C237 125 248 130 257 136" class="vessel-pulse" stroke="#e8f6f4" stroke-opacity=".7" stroke-width="2.4"/>
+   </g>
+   <g class="rbc" aria-hidden="true">
+    <g transform="translate(-2 -1)"><ellipse rx="4.1" ry="2.7" fill="#bb414c"/><ellipse rx="2" ry="1.1" fill="#ef9b91" opacity=".8"/><animateMotion dur="3.4s" begin="0s" repeatCount="indefinite" path="M106 48L106 109C106 123 111 132 124 140"/></g>
+    <g transform="translate(-2 -1)"><ellipse rx="4.1" ry="2.7" fill="#bb414c"/><ellipse rx="2" ry="1.1" fill="#ef9b91" opacity=".8"/><animateMotion dur="3.4s" begin="-1.7s" repeatCount="indefinite" path="M106 48L106 109C106 123 111 132 124 140"/></g>
+    <g transform="translate(-2 -1)"><ellipse rx="4" ry="2.6" fill="#5c6e9d"/><ellipse rx="1.9" ry="1" fill="#b5c5df" opacity=".8"/><animateMotion dur="3.2s" begin="-.6s" repeatCount="indefinite" path="M143 153C138 134 127 117 111 112C99 108 89 110 82 117"/></g>
+    <g transform="translate(-2 -1)"><ellipse rx="4" ry="2.6" fill="#5c6e9d"/><ellipse rx="1.9" ry="1" fill="#b5c5df" opacity=".8"/><animateMotion dur="3.2s" begin="-2.2s" repeatCount="indefinite" path="M143 153C138 134 127 117 111 112C99 108 89 110 82 117"/></g>
+    <g transform="translate(-2 -1)"><ellipse rx="4.1" ry="2.7" fill="#bb414c"/><ellipse rx="2" ry="1.1" fill="#ef9b91" opacity=".8"/><animateMotion dur="3.7s" begin="-1.1s" repeatCount="indefinite" path="M258 136C244 129 229 128 214 132"/></g>
+   </g>
+  </svg></div></div>
+  <div class="plate-legend"><span><i></i>OXYGEN-RICH</span><span><i class="vein"></i>OXYGEN-POOR</span></div>
+ </div>
+</div>
+
+<section style="padding-top:30px">
+ <div class="card shelf" aria-label="Biology diagrams: brain anatomy, molecule, DNA helix, heart and animal cell">
+  <div class="org"><svg viewBox="0 0 160 130"><use href="#brain"/></svg><span>Brain<small>Cerebral anatomy</small></span></div>
+  <div class="org"><svg viewBox="0 0 160 160"><use href="#mol"/></svg><span>Molecule<small>Atoms and bonds</small></span></div>
+  <div class="org"><svg id="dnaB" viewBox="0 0 90 300"></svg><span>DNA<small>Double helix</small></span></div>
+  <div class="org"><svg viewBox="0 0 220 220"><use href="#heart"/></svg><span>Heart<small>Cardiac anatomy</small></span></div>
+  <div class="org"><svg viewBox="0 0 120 120"><use href="#cell"/></svg><span>Cell<small>Animal cell</small></span></div>
+ </div>
+</section>
+
+<section id="triage">
+ <div class="triage">
+  <h2 class="sec" data-i="t1">Not sure who to see?</h2>
+  <p class="sub" data-i="t2">Tap what is closest to your problem. This is a guide, not a diagnosis.</p>
+  <div class="chips" id="sym"></div>
+  <div class="res" id="res">Choose a problem above.</div>
+ </div>
+</section>
+
+<section id="book">
+ <h2 class="sec" data-i="b1">Book an appointment</h2>
+ <p class="sub" data-i="b2">Pick what you need. We send your request to the hospital on WhatsApp for confirmation.</p>
+ <div class="card pad">
+  <p class="q" style="margin-top:0">What do you need?</p><div class="chips" id="dept"></div>
+  <p class="q">Which day?</p><div class="chips" id="days"></div>
+  <p class="q">What time suits you?</p><div class="chips" id="slots"></div>
+  <input id="bname" placeholder="Patient name" autocomplete="name">
+  <input id="bphone" placeholder="Your phone number" inputmode="tel" autocomplete="tel">
+  <textarea id="bnote" placeholder="Briefly, what is the problem? (optional)"></textarea>
+  <p style="margin:16px 0 0"><button class="btn wa" id="bsend">Send request on WhatsApp</button></p>
+  <p class="note">This is a request, not a confirmed slot. The hospital will reply to confirm.</p>
+ </div>
+</section>
+
+<section id="rate">
+ <h2 class="sec" data-i="r1">Patient reviews</h2>
+ <p class="sub" data-i="r2">Your honest rating helps other families in Dausa choose with confidence.</p>
+ <div class="grid">
+  <div class="card pad">
+   <div class="score" id="avg">–</div>
+   <div class="label" id="count">No reviews yet. Be the first.</div>
+   <div class="bars" id="bars" role="radiogroup" aria-label="Overall rating"></div>
+   <div class="label" id="word">Tap a bar to rate your overall experience</div>
+   <div id="cats"></div>
+  </div>
+  <div class="card pad">
+   <h3>Share your visit</h3>
+   <input id="rname" placeholder="Your name (optional)" autocomplete="name">
+   <textarea id="rtext" placeholder="What went well? What could be better?"></textarea>
+   <p style="margin:16px 0 0"><button class="btn" id="rsend">Post review</button></p>
+   <p class="note">Demo: reviews are saved in this browser only. A live version will store them for everyone.</p>
+   <div class="revs" id="revs"></div>
+  </div>
+ </div>
+</section>
+
+<section><div class="emerg">
+ <h2 data-i="e1">Accident or emergency? Don’t wait for a slot.</h2>
+ <a class="btn" href="#" data-call data-i="e2">Call the hospital</a>
+</div></section>
+
+<section id="aid">
+ <h2 class="sec" data-i="a1">While you reach us: first aid</h2>
+ <p class="sub">Basic steps for accidents. They never replace a doctor, so move towards care at the same time.</p>
+ <details><summary>Head or neck injury</summary><ul><li>Keep the person still. Do not move the neck or head.</li><li>Press a clean cloth on any bleeding.</li><li>Give nothing to eat or drink.</li><li>Get to the emergency room straight away if they were unconscious, vomit, or are confused.</li></ul></details>
+ <details><summary>Heavy bleeding</summary><ul><li>Press firmly on the wound with a clean cloth and keep pressing.</li><li>Do not remove soaked cloth; add more on top.</li><li>Raise the injured limb if it is not broken.</li></ul></details>
+ <details><summary>Suspected broken bone</summary><ul><li>Do not try to straighten it.</li><li>Keep the limb steady with a rolled cloth or splint.</li><li>Avoid food and drink in case surgery is needed.</li></ul></details>
+</section>
+
+<section>
+ <h2 class="sec" data-i="d1">What we treat</h2>
+ <p class="sub">Departments to be confirmed with the hospital before launch.</p>
+ <div class="dep">
+  <div class="card"><h3>Neuro & spine</h3><p>Head, brain and spine care.</p></div>
+  <div class="card"><h3>Trauma & ortho</h3><p>Accident injuries and fractures.</p></div>
+  <div class="card"><h3>General medicine</h3><p>Everyday and ongoing conditions.</p></div>
+  <div class="card"><h3>Surgery</h3><p>Planned and urgent procedures.</p></div>
+ </div>
+</section>
+
+<section>
+ <h2 class="sec" data-i="m1">Meet the doctors</h2>
+ <p class="sub">Placeholders. Add each doctor’s real name, qualification and timings.</p>
+ <div class="docs">
+  <div class="card doc"><div class="av">Dr</div><div><h3>Doctor name</h3><div class="label">Neuro & spine</div></div></div>
+  <div class="card doc"><div class="av">Dr</div><div><h3>Doctor name</h3><div class="label">Trauma & ortho</div></div></div>
+  <div class="card doc"><div class="av">Dr</div><div><h3>Doctor name</h3><div class="label">General medicine</div></div></div>
+ </div>
+</section>
+
+<section id="faq">
+ <h2 class="sec" data-i="f1">Questions families ask</h2>
+ <details><summary>Is my appointment confirmed after I send the request?</summary><p>Not yet. The hospital replies on WhatsApp to confirm the day and time.</p></details>
+ <details><summary>What should I bring?</summary><p>A photo ID, previous reports and scans, and the list of medicines the patient takes.</p></details>
+ <details><summary>Can I come without booking?</summary><p>For an emergency, come straight away or call. For a routine visit, booking first saves waiting.</p></details>
+ <details><summary>Where is the hospital?</summary><p>In Dausa, Rajasthan, with the sign visible from the road. <a href="https://www.google.com/maps/search/?api=1&query=26.8985899,76.3187043" target="_blank" rel="noopener">Open in Google Maps</a>.</p></details>
+</section>
+</div>
+<footer><div class="wrap">City Hospital Neuro Trauma & Multi-Speciality, Dausa, Rajasthan. Demo website concept.</div></footer>
+<a class="btn wa fab" href="#" data-wa="Hello City Hospital, I need some help." aria-label="Chat on WhatsApp">WhatsApp</a>
+<div class="toast" id="toast"></div>
+
+<script>
+// === Set the hospital's real numbers here (digits only with country code, e.g. 919XXXXXXXXX) ===
+var HOSPITAL_WHATSAPP = "";
+var HOSPITAL_PHONE = "";
+
+var $ = function(s){return document.querySelector(s)};
+function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("show");setTimeout(function(){t.classList.remove("show")},3200)}
+function openWA(text){
+  if(!HOSPITAL_WHATSAPP){toast("Hospital WhatsApp number is not set yet.");return}
+  window.open("https://wa.me/"+HOSPITAL_WHATSAPP+"?text="+encodeURIComponent(text),"_blank","noopener");
+}
+document.querySelectorAll("[data-wa]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();openWA(a.dataset.wa)})});
+document.querySelectorAll("[data-call]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();if(!HOSPITAL_PHONE){toast("Hospital phone number is not set yet.");return}location.href="tel:+"+HOSPITAL_PHONE})});
+
+/* ---------- Day / night ---------- */
+var root=document.documentElement, theme="light";
+try{theme=localStorage.getItem("ch_theme2")||"light"}catch(e){}
+function setTheme(t){theme=t;root.dataset.theme=t;$("#theme").setAttribute("aria-checked",t==="dark")}
+$("#theme").onclick=function(){setTheme(theme==="dark"?"light":"dark");try{localStorage.setItem("ch_theme2",theme)}catch(e){}};
+
+/* ---------- Language ---------- */
+var T={en:{},hi:{n1:"किसे दिखाएं",n2:"बुकिंग",n3:"रिव्यू",n4:"प्राथमिक उपचार",n5:"सवाल",n6:"बुक करें",h1a:"सिटी हॉस्पिटल",h1b:"न्यूरो ट्रॉमा एवं मल्टी स्पेशियलिटी",h1c:"दौसा, राजस्थान",pill:"एक मिनट में बुक करें। सच्ची रेटिंग दें।",c1:"अपॉइंटमेंट बुक करें",c2:"WhatsApp पर बात करें",c3:"अस्पताल को रेटिंग दें",t1:"किसे दिखाना है, पता नहीं?",t2:"जो परेशानी सबसे करीब हो उसे चुनें। यह सिर्फ मार्गदर्शन है, जांच नहीं।",b1:"अपॉइंटमेंट बुक करें",b2:"अपनी ज़रूरत चुनें। आपकी रिक्वेस्ट WhatsApp पर अस्पताल को जाएगी और वे पुष्टि करेंगे।",r1:"मरीज़ों के रिव्यू",r2:"आपकी सच्ची रेटिंग दौसा के दूसरे परिवारों की मदद करती है।",e1:"दुर्घटना या इमरजेंसी? स्लॉट का इंतज़ार न करें।",e2:"अस्पताल को कॉल करें",a1:"हम तक पहुंचते समय: प्राथमिक उपचार",d1:"हम क्या इलाज करते हैं",m1:"हमारे डॉक्टर",f1:"परिवारों के सवाल"}};
+var lang="en";
+document.querySelectorAll("[data-i]").forEach(function(e){T.en[e.dataset.i]=e.textContent});
+$("#lang").onclick=function(){lang=lang==="en"?"hi":"en";root.lang=lang;this.textContent=lang==="en"?"हिंदी":"English";document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=T[lang][e.dataset.i]||T.en[e.dataset.i]});setTheme(theme)};
+setTheme(theme);
+
+/* ---------- Animated DNA ---------- */
+function dna(svg){
+  var N=14,ns="http://www.w3.org/2000/svg",E=[];
+  function mk(t,a){var e=document.createElementNS(ns,t);for(var k in a)e.setAttribute(k,a[k]);svg.appendChild(e);return e}
+  var A=mk("polyline",{fill:"none",stroke:"#4890E0","stroke-width":4,"stroke-linecap":"round","stroke-linejoin":"round"});
+  var B=mk("polyline",{fill:"none",stroke:"#6D5DFC","stroke-width":4,"stroke-linecap":"round","stroke-linejoin":"round"});
+  for(var i=0;i<N;i++)E.push({r:mk("line",{stroke:"#00E6F2","stroke-width":2.5,"stroke-opacity":.6}),a:mk("circle",{fill:"#4890E0"}),b:mk("circle",{fill:"#6D5DFC"})});
+  return function(t){
+    var pa=[],pb=[];
+    for(var i=0;i<N;i++){
+      var ph=t+i*.55,s=Math.sin(ph),c=Math.cos(ph),y=12+i*(276/(N-1)),x1=45+30*s,x2=45-30*s,e=E[i];
+      pa.push(x1+","+y);pb.push(x2+","+y);
+      e.r.setAttribute("x1",x1);e.r.setAttribute("x2",x2);e.r.setAttribute("y1",y);e.r.setAttribute("y2",y);
+      e.a.setAttribute("cx",x1);e.a.setAttribute("cy",y);e.a.setAttribute("r",5+2.5*c);
+      e.b.setAttribute("cx",x2);e.b.setAttribute("cy",y);e.b.setAttribute("r",5-2.5*c);
+    }
+    A.setAttribute("points",pa.join(" "));B.setAttribute("points",pb.join(" "));
+  };
+}
+var dnas=[dna($("#dnaA")),dna($("#dnaB"))],last=0,still=false;
+var motionPreference;
+try{motionPreference=matchMedia("(prefers-reduced-motion: reduce)");still=motionPreference.matches}catch(e){}
+function frame(ms){
+  if(ms-last>33&&!document.hidden){last=ms;dnas.forEach(function(f){f(ms/900)})}
+  if(!still)requestAnimationFrame(frame);
+}
+dnas.forEach(function(f){f(0)});
+requestAnimationFrame(frame);
+
+/* ---------- Heart animation visibility ---------- */
+var heartSvg=$("#hero-heart"),heartViz=heartSvg&&heartSvg.closest(".heart-viz");
+var heartVisible=true;
+function syncHeartMotion(){
+  var active=heartVisible&&!still&&!document.hidden;
+  if(heartViz)heartViz.classList.toggle("is-active",active);
+  if(heartSvg){if(active)heartSvg.unpauseAnimations();else heartSvg.pauseAnimations()}
+}
+if(heartViz){
+  if(!still)heartViz.classList.add("is-active");
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(entries){
+      heartVisible=entries[0].isIntersecting;
+      syncHeartMotion();
+    },{threshold:.01}).observe(heartViz);
+  }
+  document.addEventListener("visibilitychange",syncHeartMotion);
+  syncHeartMotion();
+}
+if(motionPreference){
+  var onMotionPreference=function(event){
+    still=event.matches;
+    if(!still)requestAnimationFrame(frame);
+    syncHeartMotion();
+  };
+  if(motionPreference.addEventListener)motionPreference.addEventListener("change",onMotionPreference);
+  else if(motionPreference.addListener)motionPreference.addListener(onMotionPreference);
+}
+
+/* ---------- Reviews ---------- */
+var words=["","Poor","Fair","Good","Very good","Excellent"];
+var overall=0, cats={}, store=[];
+try{store=JSON.parse(localStorage.getItem("ch_reviews")||"[]")}catch(e){store=[]}
+var barsEl=$("#bars");
+for(var i=1;i<=5;i++){(function(n){var b=document.createElement("button");b.className="bar";b.type="button";b.setAttribute("role","radio");b.setAttribute("aria-label",n+" of 5");b.onclick=function(){overall=n;paintBars()};barsEl.appendChild(b)})(i)}
+function paintBars(){[].forEach.call(barsEl.children,function(b,i){b.classList.toggle("on",i<overall)});$("#word").textContent=overall?words[overall]:"Tap a bar to rate your overall experience"}
+["Doctors","Nursing staff","Cleanliness","Emergency response"].forEach(function(c){
+  var row=document.createElement("div");row.className="cat";row.innerHTML="<span>"+c+"</span><span class='dots'></span>";
+  var d=row.querySelector(".dots");
+  for(var i=1;i<=5;i++){(function(n){var b=document.createElement("button");b.type="button";b.className="dot";b.setAttribute("aria-label",c+" "+n+" of 5");b.onclick=function(){cats[c]=n;[].forEach.call(d.children,function(x,k){x.classList.toggle("on",k<n)})};d.appendChild(b)})(i)}
+  $("#cats").appendChild(row);
+});
+function esc(s){return s.replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function renderRevs(){
+  var n=store.length;
+  if(n){var a=store.reduce(function(s,r){return s+r.o},0)/n;$("#avg").textContent=a.toFixed(1);$("#count").textContent=n+(n===1?" review":" reviews")+" so far"}
+  $("#revs").innerHTML=store.slice().reverse().map(function(r){return "<div class='rev'><b>"+esc(r.n||"A patient’s family")+"</b> · "+r.o+" of 5<br>"+esc(r.t||"")+"</div>"}).join("");
+}
+$("#rsend").onclick=function(){
+  if(!overall){toast("Tap a bar first to choose your overall rating.");return}
+  store.push({o:overall,n:$("#rname").value.trim().slice(0,40),t:$("#rtext").value.trim().slice(0,300),c:cats});
+  try{localStorage.setItem("ch_reviews",JSON.stringify(store))}catch(e){}
+  renderRevs();$("#rtext").value="";overall=0;paintBars();toast("Review posted. Thank you.");
+};
+renderRevs();
+
+/* ---------- Booking ---------- */
+var sel={dept:"",day:"",slot:""};
+function chips(id,list,key,fn){
+  var el=$(id);
+  list.forEach(function(v){var b=document.createElement("button");b.type="button";b.className="chip";b.setAttribute("aria-pressed","false");b.textContent=v;
+    b.onclick=function(){sel[key]=v;[].forEach.call(el.children,function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});if(fn)fn(v)};el.appendChild(b)});
+}
+function pick(id,text){[].forEach.call($(id).children,function(x){if(x.textContent===text)x.click()})}
+chips("#dept",["Neuro & spine","Trauma & ortho","General medicine","Surgery","Not sure"],"dept");
+var days=[];for(var i=0;i<7;i++){var d=new Date();d.setDate(d.getDate()+i);days.push(i===0?"Today":i===1?"Tomorrow":d.toLocaleDateString("en-IN",{weekday:"short",day:"numeric",month:"short"}))}
+chips("#days",days,"day");
+chips("#slots",["Morning","Afternoon","Evening"],"slot");
+$("#bsend").onclick=function(){
+  var name=$("#bname").value.trim(),ph=$("#bphone").value.trim();
+  if(!sel.dept||!sel.day||!sel.slot){toast("Please choose a department, day and time.");return}
+  if(!name||ph.replace(/\D/g,"").length<10){toast("Please add the patient name and a 10-digit phone number.");return}
+  openWA("Appointment request\nPatient: "+name+"\nPhone: "+ph+"\nFor: "+sel.dept+"\nDay: "+sel.day+"\nTime: "+sel.slot+($("#bnote").value.trim()?"\nProblem: "+$("#bnote").value.trim():""));
+};
+
+/* ---------- Who to see ---------- */
+var SYM={
+ "Head injury or accident":["Trauma & ortho","If there was bleeding, vomiting, fits or loss of consciousness, go to emergency now."],
+ "Severe headache or fits":["Neuro & spine","Sudden severe headache, weakness or confusion needs urgent care. Do not wait."],
+ "Back or neck pain":["Neuro & spine","Numbness, weak legs or loss of control of urine or stool needs urgent care."],
+ "Bone or joint injury":["Trauma & ortho","Keep the limb still. A deformed or very swollen limb needs urgent care."],
+ "Fever or weakness":["General medicine","Book a visit. Go earlier if there is trouble breathing or drowsiness."],
+ "Stomach pain":["General medicine","Severe pain that keeps getting worse may need surgery review. Come in soon."]
+};
+chips("#sym",Object.keys(SYM),"sym",function(k){
+  var r=SYM[k];$("#res").innerHTML="<b>Usually seen by: "+r[0]+"</b><br>"+r[1]+"<br><button class='btn' id='go'>Book "+r[0]+"</button>";
+  $("#go").onclick=function(){pick("#dept",r[0]);$("#book").scrollIntoView()};
+});
+</script>
+</body>
+</html>
